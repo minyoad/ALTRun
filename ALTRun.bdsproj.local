@@ -19,5 +19,7 @@
     <Transaction>2008-08-01 00:34:09.552.dfm,D:\My\Code\Delphi\HotRun\Unit1.dfm=D:\My\Code\Delphi\HotRun\Form\frmLang.dfm</Transaction>
     <Transaction>2008-08-09 15:08:21.817.pas,D:\My\Code\Delphi\HotRun\Unit1.pas=D:\My\Code\Delphi\HotRun\Unit\untQuickSort.pas</Transaction>
     <Transaction>2008-08-09 17:29:28.862.pas,D:\My\Code\Delphi\HotRun\Unit\untQuickSort.pas=</Transaction>
+    <Transaction>2011-05-19 21:46:59.625.pas,E:\mywork\altrun\Unit1.pas=E:\mywork\altrun\Form\frmDirShortCut.pas</Transaction>
+    <Transaction>2011-05-19 21:46:59.625.dfm,E:\mywork\altrun\Unit1.dfm=E:\mywork\altrun\Form\frmDirShortCut.dfm</Transaction>
   </Transactions>
 </BorlandProject>

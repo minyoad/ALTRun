@@ -1,2 +1,4 @@
                               |Google 搜索引擎               
 au                            |autoruns                      
+em                            |emule                         
+re                            |最近打开文件 目录             

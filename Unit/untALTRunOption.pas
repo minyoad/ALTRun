@@ -25,7 +25,7 @@ const
   //TITLE = 'HotRun';
   //VERSION = 'V0.96';
   TITLE = 'ALTRun';
-  ALTRUN_VERSION = 'V1.3';
+  ALTRUN_VERSION = 'V1.46 my Modified';
   //原帖 http://journeyboy.blog.sohu.com/79386735.html 已经超过40K字数;
   UPGRADE_URL = 'http://journeyboy.blog.sohu.com/93455878.html';
   PARAM_FLAG = '%p';

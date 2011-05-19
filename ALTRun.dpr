@@ -19,7 +19,8 @@ uses
   frmParam in 'Form\frmParam.pas' {ParamForm},
   frmHelp in 'Form\frmHelp.pas' {HelpForm},
   frmInvalid in 'Form\frmInvalid.pas' {InvalidForm},
-  frmLang in 'Form\frmLang.pas' {LangForm};
+  frmLang in 'Form\frmLang.pas' {LangForm},
+  frmDirShortCut in 'Form\frmDirShortCut.pas' {DirShortCutForm};
 
 {$R *.res}
 
@@ -39,6 +40,7 @@ begin
   Application.Title := TITLE;
   Application.CreateForm(TALTRunForm, ALTRunForm);
   Application.CreateForm(TParamForm, ParamForm);
+  Application.CreateForm(TDirShortCutForm, DirShortCutForm);
   Application.ShowMainForm := False;
   Application.OnMinimize := ALTRunForm.evtMainMinimize;
   Application.Run;
