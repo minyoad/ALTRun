@@ -47,6 +47,7 @@ object DirShortCutForm: TDirShortCutForm
     ShowHint = True
     TabOrder = 0
     ViewStyle = vsReport
+    OnDblClick = lvShortCutDblClick
     ExplicitLeft = 8
     ExplicitWidth = 362
   end
@@ -77,6 +78,7 @@ object DirShortCutForm: TDirShortCutForm
       Height = 25
       Caption = 'Edit'
       TabOrder = 1
+      OnClick = btnEditClick
     end
     object btnDelete: TBitBtn
       Left = 22
@@ -104,6 +106,7 @@ object DirShortCutForm: TDirShortCutForm
       Anchors = [akRight, akBottom]
       Caption = 'OK'
       Default = True
+      ModalResult = 1
       TabOrder = 4
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100

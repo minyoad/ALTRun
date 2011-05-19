@@ -124,8 +124,14 @@ object ShortCutManForm: TShortCutManForm
     List = True
     AllowTextButtons = True
     TabOrder = 2
-    object btnAdd: TToolButton
+    object btnImport: TToolButton
       Left = 0
+      Top = 0
+      Action = actImport
+      Style = tbsTextButton
+    end
+    object btnAdd: TToolButton
+      Left = 73
       Top = 0
       Hint = 'Add new ShortCut item'
       Action = actAdd
@@ -134,7 +140,7 @@ object ShortCutManForm: TShortCutManForm
       Style = tbsTextButton
     end
     object btnEdit: TToolButton
-      Left = 52
+      Left = 125
       Top = 0
       Hint = 'Edit this ShortCut item'
       Action = actEdit
@@ -143,7 +149,7 @@ object ShortCutManForm: TShortCutManForm
       Style = tbsTextButton
     end
     object btnDelete: TToolButton
-      Left = 111
+      Left = 184
       Top = 0
       Hint = 'Delete this ShortCut item'
       Action = actDelete
@@ -152,7 +158,7 @@ object ShortCutManForm: TShortCutManForm
       Style = tbsTextButton
     end
     object btnValidate: TToolButton
-      Left = 184
+      Left = 257
       Top = 0
       Hint = 'Validate all ShortCuts and remove invalid ones'
       Action = actValidate
@@ -161,7 +167,7 @@ object ShortCutManForm: TShortCutManForm
       Style = tbsTextButton
     end
     object btn1: TToolButton
-      Left = 271
+      Left = 344
       Top = 0
       Width = 8
       Caption = 'btn1'
@@ -169,14 +175,14 @@ object ShortCutManForm: TShortCutManForm
       Style = tbsSeparator
     end
     object btnHelp: TToolButton
-      Left = 279
+      Left = 352
       Top = 0
       Action = actHelp
       Style = tbsTextButton
       Visible = False
     end
     object btnClose: TToolButton
-      Left = 338
+      Left = 411
       Top = 0
       Hint = 'Save and close'
       Action = actClose
@@ -185,18 +191,12 @@ object ShortCutManForm: TShortCutManForm
       Style = tbsTextButton
     end
     object btnCancel: TToolButton
-      Left = 404
+      Left = 477
       Top = 0
       Hint = 'Not save and close'
       Action = actCancel
       ParentShowHint = False
       ShowHint = True
-      Style = tbsTextButton
-    end
-    object btnImport: TToolButton
-      Left = 477
-      Top = 0
-      Action = actImport
       Style = tbsTextButton
     end
   end

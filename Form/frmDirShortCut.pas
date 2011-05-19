@@ -19,7 +19,9 @@ type
     chkRecurve: TCheckBox;
     procedure btnClearClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
+    procedure btnEditClick(Sender: TObject);
     procedure btnOpenDirClick(Sender: TObject);
+    procedure lvShortCutDblClick(Sender: TObject);
   private
     procedure search(dir: string);
     { Private declarations }
@@ -31,6 +33,8 @@ var
   DirShortCutForm: TDirShortCutForm;
 
 implementation
+uses
+  frmShortCut,untShortCutMan;
 
 {$R *.dfm}
 
@@ -42,6 +46,77 @@ end;
 procedure TDirShortCutForm.btnDeleteClick(Sender: TObject);
 begin
   lvShortCut.Items.Delete(lvShortCut.ItemIndex);
+end;
+
+procedure TDirShortCutForm.btnEditClick(Sender: TObject);
+var
+  ShortCutForm: TShortCutForm;
+  itm: TListItem;
+  ParamType: TParamType;
+  ShortCutItem: TShortCutItem;
+begin
+  if lvShortCut.ItemIndex < 0 then Exit;
+  if lvShortCut.Selected.ImageIndex <> Ord(siItem) then Exit;
+
+  try
+    ShortCutForm := TShortCutForm.Create(Self);
+    with ShortCutForm do
+    begin
+      lbledtShortCut.Text := lvShortCut.Selected.Caption;
+      lbledtName.Text := lvShortCut.Selected.SubItems[0];
+      lbledtCommandLine.Text := lvShortCut.Selected.SubItems[2];
+      ShortCutMan.StringToParamType(lvShortCut.Selected.SubItems[1], ParamType);
+      rgParam.ItemIndex := Ord(ParamType);
+
+      ShowModal;
+
+      if ModalResult = mrCancel then Exit;
+
+      try
+        itm := TListItem.Create(lvShortCut.Items);
+
+        if (Trim(lbledtShortCut.Text) <> '') and (Trim(lbledtCommandLine.Text) <> '') then
+        begin
+          itm.Caption := lbledtShortCut.Text;
+          itm.SubItems.Add(lbledtName.Text);
+          itm.SubItems.Add(ShortCutMan.ParamTypeToString(TParamType(rgParam.ItemIndex)));
+          itm.SubItems.Add(lbledtCommandLine.Text);
+          itm.ImageIndex := Ord(siItem);
+        end
+        else
+        begin
+          itm.Caption := '';
+          itm.SubItems.Add('');
+          itm.SubItems.Add('');
+          itm.SubItems.Add('');
+          itm.ImageIndex := Ord(siInfo);
+        end;
+
+        //若有重复，则报错
+//        if ExistListItem(itm) then
+//        begin
+//          Application.MessageBox('This ShortCut has already existed!', PChar(resInfo),
+//            MB_OK + MB_ICONINFORMATION + MB_TOPMOST);
+//
+//          Exit;
+//        end;
+
+        lvShortCut.Selected.Caption := itm.Caption;
+        lvShortCut.Selected.SubItems[0] := itm.SubItems[0];
+        lvShortCut.Selected.SubItems[1] := itm.SubItems[1];
+        lvShortCut.Selected.SubItems[2] := itm.SubItems[2];
+        lvShortCut.Selected.ImageIndex := itm.ImageIndex;
+
+        //使其可见
+        lvShortCut.Selected.MakeVisible(True);
+      finally
+        itm.Free;
+      end;
+    end;
+  finally
+    ShortCutForm.Free;
+  end;
+
 end;
 
 procedure TDirShortCutForm.btnOpenDirClick(Sender: TObject);
@@ -74,6 +149,11 @@ begin
       FindClose(sr);
     end;
 
+end;
+
+procedure TDirShortCutForm.lvShortCutDblClick(Sender: TObject);
+begin
+  btnEdit.Click;
 end;
 
 procedure TDirShortCutForm.search(dir: string);

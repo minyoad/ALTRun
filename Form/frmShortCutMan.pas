@@ -277,21 +277,71 @@ procedure TShortCutManForm.actImportExecute(Sender: TObject);
 var
   dirShortCutForm: TDirShortCutForm;
   NewLine: string;
-  ListItem: TListItem;
+  ListItem,srcItem: TListItem;
   ShortCutItem: TShortCutItem;
-begin
+  i: integer;
+begin  
+  dirShortCutForm := TDirShortCutForm.Create(Self);
   try
-    dirShortCutForm := TDirShortCutForm.Create(Self);
-    with dirShortCutForm do
+    dirShortCutForm.lvShortCut.Clear;
+    if dirShortCutForm.ShowModal = mrCancel then
+      exit;
+
+    for I := 0 to dirShortCutForm.lvShortCut.Items.Count - 1 do
     begin
+      srcItem := dirShortCutForm.lvShortCut.Items[i];
+
+      ListItem := TListItem.Create(lvShortCut.Items);
+      ListItem.Assign(srcItem);
+
+//      if (Trim(srcItem.Caption) <> '') and (Trim(srcItem.SubItems[1]) <> '') then
+//      begin
+//        ListItem.Caption := lbledtShortCut.Text;
+//        ListItem.SubItems.Add(lbledtName.Text);
+//        ListItem.SubItems.Add(ShortCutMan.ParamTypeToString(TParamType(rgParam.ItemIndex)));
+//        ListItem.SubItems.Add(lbledtCommandLine.Text);
+//        ListItem.ImageIndex := Ord(siItem);
+//      end
+//      else
+//      begin
+//        ListItem.Caption := '';
+//        ListItem.SubItems.Add('');
+//        ListItem.SubItems.Add('');
+//        ListItem.SubItems.Add('');
+//        ListItem.ImageIndex := Ord(siInfo);
+//      end;
+      
+
+              //如果没有选中，就加到最后一行，否则就插入选中的位置
+      if lvShortCut.ItemIndex < 0 then
+        ListItem := lvShortCut.Items.AddItem(ListItem)
+      else
+        ListItem := lvShortCut.Items.AddItem(ListItem, lvShortCut.ItemIndex);
+
+      //使其可见
+      lvShortCut.SetFocus;
+      ListItem.Selected := True;
+      ListItem.MakeVisible(True);
+    end;
+
+  finally
+    dirShortCutForm.Free; 
+  end;
+
+
+//    with dirShortCutForm do
+//    begin
 //      lbledtShortCut.Clear;
 //      lbledtName.Clear;
 //      lbledtCommandLine.Clear;
 //      rgParam.ItemIndex := 0;
+//      lvShortCut.Clear;
+//
+//      ShowModal;
+//
+//      if ModalResult = mrCancel then Exit;
 
-      ShowModal;
 
-      if ModalResult = mrCancel then Exit;
 
 //      ListItem := TListItem.Create(lvShortCut.Items);
 //
@@ -336,10 +386,10 @@ begin
 //      //如果Caption只是一个字母，如"a"，则当时不显示，只好处理一下才能刷新显示
 //      ListItem.Caption := lbledtShortCut.Text + ' ';
 //      ListItem.Caption := lbledtShortCut.Text;
-    end;
-  finally
-    dirShortCutForm.Free;
-  end;
+//    end;
+//  finally
+//    dirShortCutForm.Free;
+//  end;
 
 end;
 
