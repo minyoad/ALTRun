@@ -1,0 +1,1 @@
+By Troels Jakobsen. HotKeyManager is a component that allows you to add system-wide hotkeys to your application. A system-wide hotkey (a key combination like Ctrl+Alt+X) allows you to invoke a custom action from anywhere. Your application doesn't have to be in the foreground or even visible to receive the hotkey events.

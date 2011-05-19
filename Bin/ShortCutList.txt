@@ -1,0 +1,31 @@
+F100     |                    |Computer                      |我的电脑                      |::{20D04FE0-3AEA-1069-A2D8-08002B30309D}
+F0       |                    |Explorer                      |资源管理器                    |explorer.exe /e,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}
+F0       |                    |MyDocument                    |我的文档                      |explorer.exe
+F8       |                    |ie                            |IE浏览器                      |iexplore.exe
+F7       |                    |notepad                       |记事本                        |notepad
+F0       |                    |mspaint                       |画图                          |mspaint
+F6       |                    |cmd                           |Dos窗口                       |cmd
+F5       |                    |Calc                          |计算器                        |calc
+F0       |                    |Desktop                       |显示桌面                      |.\MyCmd\Desktop.scf
+F0       |                    |msconfig                      |系统配置                      |msconfig
+F4       |                    |Reg                           |注册表编辑器                  |regedt32
+F0       |                    |myip                          |我的IP地址                    |nslookup
+F0       |                    |dev                           |设备管理器                    |devmgmt.msc
+F0       |                    |Taskmgr                       |任务管理器                    |taskmgr
+F0       |                    |ShutDown                      |立即关机                      |tsshutdn 3 /delay:0
+F0       |                    |Reboot                        |立即重启                      |tsshutdn 3 /delay:0 /reboot
+
+F0       |                    |Windows                       |Windows 目录                  |%WINDIR%
+F0       |                    |System32                      |System32 目录                 |%WINDIR%\System32
+F0       |                    |ProgramFiles                  |Program Files 目录            |%PROGRAMFILES%
+F10      |                    |Recent                        |最近打开文件 目录             |%USERPROFILE%\Recent
+
+F12      |URL_Query           |b                             |百度 搜索引擎                 |http://www.baidu.com/s?wd=
+F15      |URL_Query           |g                             |Google 搜索引擎               |http://www.google.com/search?q=
+F0       |URL_Query           |s                             |搜狗MP3 搜索引擎              |http://mp3.sogou.com/music.so?query=
+F9       |URL_Query           |zd                            |百度知道 搜索引擎             |http://zhidao.baidu.com/q?ct=17&pn=0&tn=ikaslist&rn=10&word=
+F0       |UTF8_Query          |v                             |VeryCD 搜索引擎               |http://www.verycd.com/search/folders?kw=
+F0       |UTF8_Query          |y                             |Yahoo 搜索引擎                |http://search.yahoo.com/search?p=
+
+F15      |                    |Upgrade                       |前往 ALTRun 升级网址          |http://journeyboy.blog.sohu.com/93455878.html
+F0       |                    |Config                        |编辑 ALTRun 配置              |.\ALTRun.ini
