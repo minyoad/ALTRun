@@ -17,6 +17,7 @@ type
     btnOK: TBitBtn;
     btnClear: TBitBtn;
     chkRecurve: TCheckBox;
+    procedure FormCreate(Sender: TObject);
     procedure btnClearClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
@@ -37,6 +38,31 @@ uses
   frmShortCut,untShortCutMan;
 
 {$R *.dfm}
+
+procedure TDirShortCutForm.FormCreate(Sender: TObject);
+begin
+  Self.Caption := resDirShortCutFormCaption;
+
+  btnOpenDir.Caption:=resBtnOpenDir;
+  btnEdit.Caption := resBtnEdit;
+  btnDelete.Caption := resBtnDelete;
+  btnCancel.Caption := resBtnCancel;
+  btnClear.Caption:=resBtnClear;
+
+//  btnAdd.Hint := resBtnAddHint;
+  btnEdit.Hint := resBtnEditHint;
+  btnDelete.Hint := resBtnDeleteHint;
+  btnCancel.Hint := resBtnCancelHint;
+
+  chkRecurve.Caption:=resChkRecurve;
+  chkRecurve.Hint:=resChkRecurveHint;
+
+
+  lvShortCut.Columns.Items[0].Caption := resShortCut;
+  lvShortCut.Columns.Items[1].Caption := resName;
+  lvShortCut.Columns.Items[2].Caption := resParamType;
+  lvShortCut.Columns.Items[3].Caption := resCommandLine;
+end;
 
 procedure TDirShortCutForm.btnClearClick(Sender: TObject);
 begin
@@ -160,7 +186,7 @@ procedure TDirShortCutForm.search(dir: string);
 var
   targetpath: string; {目标路径名}
   sr: TsearchRec;
-  strDir, strShortDir, strFileName, strShortFileName: string;
+  strFileName, strShortFileName: string;
 begin
 
      {第一阶段:找出初始dir目录下的所有文件,其中dir变量值由edit1的Text属性确定}

@@ -20,6 +20,7 @@ BtnEdit                   = Edit
 BtnDelete                 = Delete
 BtnValidate               = Validate
 BtnClose                  = Close
+BtnImport									=Import
 
 ShortCut                  = ShortCut
 Name                      = Name
@@ -172,6 +173,16 @@ ReplaceConfirm            = Replace "%s" with "%s"?
 ReplaceShortCutConfirm    = Replace ShortCut Confirm
 ReplaceNameConfirm        = Replace Name Confirm
 NameCanNotInclude         = Name can not include ","
+
+[DirShortCutForm]
+DirShortCutFormCaption=Import Shutcuts by Search Directory
+BtnOpenDir					=	OpenDir
+BtnClear					=	Clear
+ChkRecurve				=Recurve
+
+BtnOpenDirHint	=Open A Directory
+BtnClearHint	=Clear List ShortCuts
+ChkRecurveHint	=Add ShortCuts by Recurve
 
 [DefaultShortCutName]
 Default_ShortCut_Name_0   = My Computer

@@ -325,72 +325,8 @@ begin
     end;
 
   finally
-    dirShortCutForm.Free; 
-  end;
-
-
-//    with dirShortCutForm do
-//    begin
-//      lbledtShortCut.Clear;
-//      lbledtName.Clear;
-//      lbledtCommandLine.Clear;
-//      rgParam.ItemIndex := 0;
-//      lvShortCut.Clear;
-//
-//      ShowModal;
-//
-//      if ModalResult = mrCancel then Exit;
-
-
-
-//      ListItem := TListItem.Create(lvShortCut.Items);
-//
-//      if (Trim(lbledtShortCut.Text) <> '') and (Trim(lbledtCommandLine.Text) <> '') then
-//      begin
-//        ListItem.Caption := lbledtShortCut.Text;
-//        ListItem.SubItems.Add(lbledtName.Text);
-//        ListItem.SubItems.Add(ShortCutMan.ParamTypeToString(TParamType(rgParam.ItemIndex)));
-//        ListItem.SubItems.Add(lbledtCommandLine.Text);
-//        ListItem.ImageIndex := Ord(siItem);
-//      end
-//      else
-//      begin
-//        ListItem.Caption := '';
-//        ListItem.SubItems.Add('');
-//        ListItem.SubItems.Add('');
-//        ListItem.SubItems.Add('');
-//        ListItem.ImageIndex := Ord(siInfo);
-//      end;
-//
-//      //若有重复，则报错
-//      if ExistListItem(ListItem) then
-//      begin
-//        Application.MessageBox('This ShortCut has already existed!', PChar(resInfo),
-//          MB_OK + MB_ICONINFORMATION + MB_TOPMOST);
-//
-//        ListItem.Free;
-//        Exit;
-//      end;
-//
-//      //如果没有选中，就加到最后一行，否则就插入选中的位置
-//      if lvShortCut.ItemIndex < 0 then
-//        ListItem := lvShortCut.Items.AddItem(ListItem)
-//      else
-//        ListItem := lvShortCut.Items.AddItem(ListItem, lvShortCut.ItemIndex);
-//
-//      //使其可见
-//      lvShortCut.SetFocus;
-//      ListItem.Selected := True;
-//      ListItem.MakeVisible(True);
-//
-//      //如果Caption只是一个字母，如"a"，则当时不显示，只好处理一下才能刷新显示
-//      ListItem.Caption := lbledtShortCut.Text + ' ';
-//      ListItem.Caption := lbledtShortCut.Text;
-//    end;
-//  finally
-//    dirShortCutForm.Free;
-//  end;
-
+    dirShortCutForm.Free;
+  end; 
 end;
 
 procedure TShortCutManForm.actValidateExecute(Sender: TObject);
@@ -522,6 +458,7 @@ begin
   //mniInsert.Enabled := False;
   //m_Cutted := False;
 
+
   Self.Caption := resShortCutManFormCaption;
   btnAdd.Caption := resBtnAdd;
   btnEdit.Caption := resBtnEdit;
@@ -530,6 +467,8 @@ begin
   btnHelp.Caption := resBtnHelp;
   btnClose.Caption := resBtnClose;
   btnCancel.Caption := resBtnCancel;
+  btnImport.Caption:=resBtnImport;
+
 
   btnAdd.Hint := resBtnAddHint;
   btnEdit.Hint := resBtnEditHint;

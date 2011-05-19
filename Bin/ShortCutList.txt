@@ -50,3 +50,4 @@ F0       |                    |ESET_VC52_AUTOID              |ESET_VC52_AUTOID  
 F0       |                    |DTaskManager                  |DTaskManager                  |D:\tools\DTaskManager.exe
 F0       |                    |ctags                         |ctags                         |D:\tools\ctags.exe
 F0       |                    |autoruns                      |autoruns                      |D:\tools\autoruns.exe
+F0       |                    |emule                         |emule                         |D:\NeoEmule\emule.exe

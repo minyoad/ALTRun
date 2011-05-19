@@ -20,6 +20,7 @@ BtnEdit                   = 编辑
 BtnDelete                 = 删除
 BtnValidate               = 校验
 BtnClose                  = 关闭
+BtnImport									=导入
 
 ShortCut                  = 快捷项
 Name                      = 名称
@@ -172,6 +173,16 @@ ReplaceConfirm            = 替换 "%s" 为 "%s"?
 ReplaceShortCutConfirm    = 快捷项替换确认
 ReplaceNameConfirm        = 名称替换确认
 NameCanNotInclude         = 名称不能包含逗号 ","
+
+[DirShortCutForm]
+DirShortCutFormCaption=从目录导入可执行文件
+BtnOpenDir					=	打开目录
+BtnClear					=	清除
+ChkRecurve				=递归
+
+BtnOpenDirHint=打开一个目录
+BtnClearHint=清除左侧的列表
+ChkRecurveHint=递归添加子目录
 
 [DefaultShortCutName]
 Default_ShortCut_Name_0   = 我的电脑

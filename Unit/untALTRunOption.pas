@@ -31,7 +31,7 @@ const
   PARAM_FLAG = '%p';
   RESTART_FLAG = 'Restart';
   CLEAN_FLAG = 'Clean';
-  CMD_DIR='MyCmd';
+  CMD_DIR = 'MyCmd';
   LOCALIZED_KEYNAMES = True;
 
   SECTION_CONFIG = 'Config';
@@ -98,7 +98,9 @@ const
   SECTION_INVALIDFORM = 'InvalidForm';
   SECTION_SHORTCUTMANFORM = 'ShortCutManForm';
   SECTION_SHORTCUTFORM = 'ShortCutForm';
+  SECTION_DIRSHORTCUTFORM = 'DirShortCutForm';
   SECTION_DEFAULTSHORTCUTLIST = 'DefaultShortCutName';
+
 
   //Common
   KEY_INFO = 'Info';
@@ -122,6 +124,7 @@ const
   KEY_BTNDELETE = 'BtnDelete';
   KEY_BTNVALIDATE = 'BtnValidate';
   KEY_BTNCLOSE = 'BtnClose';
+  KEY_BTNIMPORT='BtnImport';
 
   KEY_SHORTCUT = 'ShortCut';
   KEY_NAME = 'Name';
@@ -144,7 +147,7 @@ const
   KEY_AUTORUNWHENSTART = 'AutoRunWhenStart';
   KEY_ADDTOSENDTOMENU = 'AddToSendToMenu';
   KEY_RESTARTMEINFO = 'RestartMeInfo';
-  KEY_CLEANCONFIRM='CleanConfirm';
+  KEY_CLEANCONFIRM = 'CleanConfirm';
 
   KEY_BTNSHORTCUTHINT = 'BtnShortCutHint';
   KEY_BTNFAKECLOSEHINT = 'BtnFAKECloseHint';
@@ -258,6 +261,17 @@ const
   KEY_BTNHELPHINT = 'BtnHelpHint';
   KEY_BTNCLOSEHINT = 'BtnCloseHint';
   KEY_BTNCANCELHINT = 'BtnCancelHint';
+
+//    //DirShortCutForm
+  KEY_DirShortCutFormCaption='DirShortCutFormCaption';
+  KEY_BtnOpenDir = 'BtnOpenDir';
+  KEY_BtnClear = 'BtnClear';
+  KEY_ChkRecurve = 'ChkRecurve';
+
+  KEY_BtnOpenDirHint = 'BtnOpenDirHint';
+  KEY_BtnClearHint = 'BtnClearHint';
+  KEY_ChkRecurveHint = 'ChkRecurveHint';
+
 
   //ShortCutForm
   KEY_SHORTCUTFORMCAPTION = 'ShortCutFormCaption';
@@ -373,6 +387,7 @@ var
   resBtnDelete: string;
   resBtnValidate: string;
   resBtnClose: string;
+  resBtnImport:string;
 
   resShortCut: string;
   resName: string;
@@ -471,6 +486,17 @@ var
   resBtnHelpHint: string;
   resBtnCloseHint: string;
   resBtnCancelHint: string;
+
+  //DirShortCutForm
+  resDirShortCutFormCaption:string;
+  resBtnOpenDir: string;
+  resBtnClear: string;
+  resChkRecurve: string;
+
+  resBtnOpenDirHint: string;
+  resBtnClearHint: string;
+  resChkRecurveHint: string;
+
 
   //ShortCutForm
   resShortCutFormCaption: string;
@@ -768,6 +794,7 @@ begin
   resBtnDelete := IniFile.ReadString(SECTION_COMMON, KEY_BTNDELETE, 'Delete');
   resBtnValidate := IniFile.ReadString(SECTION_COMMON, KEY_BTNVALIDATE, 'Validate');
   resBtnClose := IniFile.ReadString(SECTION_COMMON, KEY_BTNCLOSE, 'Close');
+  resBtnImport:= IniFile.ReadString(SECTION_COMMON, KEY_BTNIMPORT, 'Import');
 
   resShortCut := IniFile.ReadString(SECTION_COMMON, KEY_SHORTCUT, 'ShortCut');
   resName := IniFile.ReadString(SECTION_COMMON, KEY_NAME, 'Name');
@@ -905,6 +932,14 @@ begin
   resBtnCloseHint := IniFile.ReadString(SECTION_SHORTCUTMANFORM, KEY_BtnCloseHint, 'Save and close');
   resBtnCancelHint := IniFile.ReadString(SECTION_SHORTCUTMANFORM, KEY_BtnCancelHint, 'Not save and close');
 
+    //DirShortCutForm
+  resBtnOpenDir := IniFile.ReadString(SECTION_DIRSHORTCUTFORM, KEY_BtnOpenDir, 'Open Dir');
+  resBtnClear := IniFile.ReadString(SECTION_DIRSHORTCUTFORM, KEY_BtnClear, 'Clear');
+  resChkRecurve := IniFile.ReadString(SECTION_DIRSHORTCUTFORM, KEY_ChkRecurve, 'Recurve');
+  resBtnOpenDirHint := IniFile.ReadString(SECTION_DIRSHORTCUTFORM, KEY_BtnOpenDirHint, 'Open A Direcotry');
+  resBtnClearHint := IniFile.ReadString(SECTION_DIRSHORTCUTFORM, KEY_BtnClearHint, 'Clear ShortCut List');
+  resChkRecurveHint := IniFile.ReadString(SECTION_DIRSHORTCUTFORM, KEY_ChkRecurveHint, 'Add Destinct Direcotry by Recurve');
+  resDirShortCutFormCaption:=IniFile.ReadString(SECTION_DIRSHORTCUTFORM, KEY_DirShortCutFormCaption, 'Import ShortCuts by Search Directory');
   //ShortCutForm
   resShortCutFormCaption := IniFile.ReadString(SECTION_SHORTCUTFORM, KEY_ShortCutFormCaption, 'ShortCut');
   resGrpShortCut := IniFile.ReadString(SECTION_SHORTCUTFORM, KEY_GrpShortCut, 'ShortCut');

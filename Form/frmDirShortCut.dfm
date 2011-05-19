@@ -11,6 +11,7 @@ object DirShortCutForm: TDirShortCutForm
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object lvShortCut: TListView
@@ -91,7 +92,7 @@ object DirShortCutForm: TDirShortCutForm
     end
     object btnCancel: TBitBtn
       Left = 23
-      Top = 328
+      Top = 360
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
@@ -100,7 +101,7 @@ object DirShortCutForm: TDirShortCutForm
     end
     object btnOK: TBitBtn
       Left = 23
-      Top = 281
+      Top = 329
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
