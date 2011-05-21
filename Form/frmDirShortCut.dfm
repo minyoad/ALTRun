@@ -3,7 +3,7 @@ object DirShortCutForm: TDirShortCutForm
   Top = 0
   Caption = 'DirShortCutForm'
   ClientHeight = 404
-  ClientWidth = 610
+  ClientWidth = 625
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,7 +17,7 @@ object DirShortCutForm: TDirShortCutForm
   object lvShortCut: TListView
     Left = 0
     Top = 0
-    Width = 488
+    Width = 496
     Height = 404
     Align = alClient
     Columns = <
@@ -43,25 +43,26 @@ object DirShortCutForm: TDirShortCutForm
     FullDrag = True
     GridLines = True
     HideSelection = False
+    MultiSelect = True
     RowSelect = True
     ParentShowHint = False
     ShowHint = True
     TabOrder = 0
     ViewStyle = vsReport
     OnDblClick = lvShortCutDblClick
-    ExplicitLeft = 8
-    ExplicitWidth = 362
+    OnKeyDown = lvShortCutKeyDown
+    OnKeyPress = lvShortCutKeyPress
   end
   object pnlRight: TPanel
-    Left = 488
+    Left = 496
     Top = 0
-    Width = 122
+    Width = 129
     Height = 404
     Align = alRight
     TabOrder = 1
-    ExplicitLeft = 494
+    ExplicitLeft = 502
     DesignSize = (
-      122
+      129
       404)
     object btnOpenDir: TBitBtn
       Left = 22
@@ -91,22 +92,22 @@ object DirShortCutForm: TDirShortCutForm
       OnClick = btnDeleteClick
     end
     object btnCancel: TBitBtn
-      Left = 23
+      Left = 30
       Top = 360
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       TabOrder = 3
       Kind = bkCancel
+      ExplicitLeft = 23
     end
     object btnOK: TBitBtn
-      Left = 23
+      Left = 30
       Top = 329
       Width = 75
       Height = 25
       Anchors = [akRight, akBottom]
       Caption = 'OK'
-      Default = True
       ModalResult = 1
       TabOrder = 4
       Glyph.Data = {
@@ -127,6 +128,7 @@ object DirShortCutForm: TDirShortCutForm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
+      ExplicitLeft = 23
     end
     object btnClear: TBitBtn
       Left = 22
@@ -138,12 +140,32 @@ object DirShortCutForm: TDirShortCutForm
       OnClick = btnClearClick
     end
     object chkRecurve: TCheckBox
-      Left = 32
+      Left = 16
       Top = 56
-      Width = 97
+      Width = 65
       Height = 17
       Caption = 'Recurve'
       TabOrder = 6
+      OnClick = chkRecurveClick
+    end
+    object edtDepth: TEdit
+      Left = 80
+      Top = 54
+      Width = 25
+      Height = 21
+      TabOrder = 7
+      Text = '0'
+    end
+    object ud1: TUpDown
+      Left = 105
+      Top = 54
+      Width = 16
+      Height = 21
+      Associate = edtDepth
+      Min = 1
+      Max = 10
+      Position = 1
+      TabOrder = 8
     end
   end
 end

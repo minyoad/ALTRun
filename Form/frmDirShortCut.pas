@@ -17,16 +17,23 @@ type
     btnOK: TBitBtn;
     btnClear: TBitBtn;
     chkRecurve: TCheckBox;
+    edtDepth: TEdit;
+    ud1: TUpDown;
     procedure FormCreate(Sender: TObject);
     procedure btnClearClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
     procedure btnOpenDirClick(Sender: TObject);
+    procedure chkRecurveClick(Sender: TObject);
     procedure lvShortCutDblClick(Sender: TObject);
+    procedure lvShortCutKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure lvShortCutKeyPress(Sender: TObject; var Key: Char);
   private
+    FCurrDepth: Integer;
     procedure search(dir: string);
     { Private declarations }
   public
+    function GetDirDepth(ADirName: string): Integer;
     { Public declarations }
   end;
 
@@ -35,7 +42,7 @@ var
 
 implementation
 uses
-  frmShortCut,untShortCutMan;
+  frmShortCut, untShortCutMan;
 
 {$R *.dfm}
 
@@ -43,19 +50,19 @@ procedure TDirShortCutForm.FormCreate(Sender: TObject);
 begin
   Self.Caption := resDirShortCutFormCaption;
 
-  btnOpenDir.Caption:=resBtnOpenDir;
+  btnOpenDir.Caption := resBtnOpenDir;
   btnEdit.Caption := resBtnEdit;
   btnDelete.Caption := resBtnDelete;
   btnCancel.Caption := resBtnCancel;
-  btnClear.Caption:=resBtnClear;
+  btnClear.Caption := resBtnClear;
 
 //  btnAdd.Hint := resBtnAddHint;
   btnEdit.Hint := resBtnEditHint;
   btnDelete.Hint := resBtnDeleteHint;
   btnCancel.Hint := resBtnCancelHint;
 
-  chkRecurve.Caption:=resChkRecurve;
-  chkRecurve.Hint:=resChkRecurveHint;
+  chkRecurve.Caption := resChkRecurve;
+  chkRecurve.Hint := resChkRecurveHint;
 
 
   lvShortCut.Columns.Items[0].Caption := resShortCut;
@@ -70,7 +77,14 @@ begin
 end;
 
 procedure TDirShortCutForm.btnDeleteClick(Sender: TObject);
+var
+  i:integer;
 begin
+//  for I := 0 to lvShortCut.Items.Count - 1 do
+//  begin
+//    if lvShortCut.Items[i].Selected then
+//    lvShortCut.Items.Delete(i);
+//  end;
   lvShortCut.Items.Delete(lvShortCut.ItemIndex);
 end;
 
@@ -155,7 +169,10 @@ begin
 
 //  lvShortCut.Items.Clear;
   if chkRecurve.Checked then
-    search(strDir)
+  begin
+    FCurrDepth := GetDirDepth(strDir);
+    search(strDir);
+  end
   else
     if FindFirst(strDir + '\*.exe', faAnyFile + faArchive, sr) = 0 then
     begin
@@ -177,9 +194,44 @@ begin
 
 end;
 
+procedure TDirShortCutForm.chkRecurveClick(Sender: TObject);
+begin
+  edtDepth.Enabled := chkRecurve.Checked;
+end;
+
+function TDirShortCutForm.GetDirDepth(ADirName: string): Integer;
+begin
+  Result := 0;
+  with TStringList.Create do
+  try
+    Delimiter := '\';
+    DelimitedText := ADirName;
+    Result := Count;
+  finally
+    free;
+  end;
+end;
+
 procedure TDirShortCutForm.lvShortCutDblClick(Sender: TObject);
 begin
   btnEdit.Click;
+end;
+
+procedure TDirShortCutForm.lvShortCutKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  case Key of
+    VK_DELETE: btnDeleteClick(nil);
+    VK_RETURN: btnEditClick(nil);
+  end;
+end;
+
+procedure TDirShortCutForm.lvShortCutKeyPress(Sender: TObject; var Key: Char);
+begin
+//  case Ord(Key) of
+//    VK_DELETE: btnDeleteClick(nil);
+//    VK_RETURN: btnEditClick(nil);
+//  end;
 end;
 
 procedure TDirShortCutForm.search(dir: string);
@@ -188,6 +240,10 @@ var
   sr: TsearchRec;
   strFileName, strShortFileName: string;
 begin
+//  Inc(FCurrDepth);
+
+  if GetDirDepth(dir) - FCurrDepth >= StrToInt(edtDepth.Text) then
+    exit;
 
      {第一阶段:找出初始dir目录下的所有文件,其中dir变量值由edit1的Text属性确定}
   targetpath := extractfilepath(dir); {分解出目标路径名}
