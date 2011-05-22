@@ -271,6 +271,8 @@ const
   KEY_BtnOpenDirHint = 'BtnOpenDirHint';
   KEY_BtnClearHint = 'BtnClearHint';
   KEY_ChkRecurveHint = 'ChkRecurveHint';
+  KEY_Recurve='Recurve';
+  KEY_RecurveDepth='RecurveDepth';
 
 
   //ShortCutForm
@@ -357,6 +359,9 @@ var
   AlphaColor: TColor;
   Alpha: Integer;
   Lang: string;
+
+  Recurve:Boolean;
+  RecurveDepth:integer;
 
   WinTop, WinLeft: Integer;
   ManWinTop, ManWinLeft, ManWinWidth, ManWinHeight: Integer;
@@ -673,6 +678,9 @@ begin
   ShowSkin := IniFile.ReadBool(SECTION_CONFIG, KEY_SHOWSKIN, True);
   ShowMeWhenStart := IniFile.ReadBool(SECTION_CONFIG, KEY_SHOWMEWHENSTART, False);
 
+  Recurve:=IniFile.ReadBool(SECTION_DIRSHORTCUTFORM,KEY_Recurve,False);
+  RecurveDepth:=IniFile.ReadInteger(SECTION_DIRSHORTCUTFORM,KEY_RecurveDepth,2);
+
   WinTop := IniFile.ReadInteger(SECTION_WINDOW, KEY_WINTOP, 0);
   WinLeft := IniFile.ReadInteger(SECTION_WINDOW, KEY_WINLEFT, 0);
 
@@ -736,6 +744,9 @@ begin
   IniFile.WriteBool(SECTION_CONFIG, KEY_EXITWHENEXECUTE, ExitWhenExecute);
   IniFile.WriteBool(SECTION_CONFIG, KEY_SHOWSKIN, ShowSkin);
   IniFile.WriteBool(SECTION_CONFIG, KEY_SHOWMEWHENSTART, ShowMeWhenStart);
+
+  IniFile.WriteBool(SECTION_DIRSHORTCUTFORM,KEY_Recurve,Recurve);
+  IniFile.WriteInteger(SECTION_DIRSHORTCUTFORM,KEY_RecurveDepth,RecurveDepth);
 
   IniFile.WriteInteger(SECTION_WINDOW, KEY_WINTOP, WinTop);
   IniFile.WriteInteger(SECTION_WINDOW, KEY_WINLEFT, WinLeft);

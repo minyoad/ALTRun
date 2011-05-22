@@ -29,25 +29,3 @@ F0       |UTF8_Query          |y                             |Yahoo ËÑË÷ÒýÇæ    
 
 F15      |                    |Upgrade                       |Ç°Íù ALTRun Éý¼¶ÍøÖ·          |http://journeyboy.blog.sohu.com/93455878.html
 F0       |                    |Config                        |±à¼­ ALTRun ÅäÖÃ              |.\ALTRun.ini
-F0       |                    |XEDistiller                   |XEDistiller                   |D:\tools\XEDistiller.exe
-F0       |                    |upx                           |upx                           |D:\tools\upx.exe
-F0       |                    |TweakUI                       |TweakUI                       |D:\tools\TweakUI.exe
-F0       |                    |sscom32                       |sscom32                       |D:\tools\sscom32.exe
-F0       |                    |shortcut                      |shortcut                      |D:\tools\shortcut.exe
-F0       |                    |sfk158                        |sfk158                        |D:\tools\sfk158.exe
-F0       |                    |putty                         |putty                         |D:\tools\putty.exe
-F0       |                    |Procmon                       |Procmon                       |D:\tools\Procmon.exe
-F0       |                    |OSFMount                      |OSFMount                      |D:\tools\OSFMount.exe
-F0       |                    |Notepad2                      |Notepad2                      |D:\tools\Notepad2.exe
-F0       |                    |nc                            |nc                            |D:\tools\nc.exe
-F0       |                    |LevinISO                      |LevinISO                      |D:\tools\LevinISO.exe
-F0       |                    |junction                      |junction                      |D:\tools\junction.exe
-F0       |                    |Icon Í¼±ê·è¿ñËÑË÷             |Icon Í¼±ê·è¿ñËÑË÷             |D:\tools\Icon Í¼±ê·è¿ñËÑË÷.exe
-F0       |                    |Hash                          |Hash                          |D:\tools\Hash.exe
-F0       |                    |FINALDATA                     |FINALDATA                     |D:\tools\FINALDATA.EXE
-F0       |                    |Everything-1.2.1.371          |Everything-1.2.1.371          |D:\tools\Everything-1.2.1.371.exe
-F0       |                    |ESET_VC52_AUTOID              |ESET_VC52_AUTOID              |D:\tools\ESET_VC52_AUTOID.exe
-F0       |                    |DTaskManager                  |DTaskManager                  |D:\tools\DTaskManager.exe
-F0       |                    |ctags                         |ctags                         |D:\tools\ctags.exe
-F0       |                    |autoruns                      |autoruns                      |D:\tools\autoruns.exe
-F0       |                    |emule                         |emule                         |D:\NeoEmule\emule.exe

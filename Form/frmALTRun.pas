@@ -1363,7 +1363,7 @@ begin
   if ShowStartNotification then
     ntfMain.ShowBalloonHint(resInfo,
       Format(resStarted + #13#10 + resPressKeyToShowMe,[TITLE, ALTRUN_VERSION, HotKeyStr]),
-      bitInfo, 15);
+      bitInfo, 5);
 
   //∏°∂ØÃ· æ
   ntfMain.Hint := Format(resMainHint, [TITLE, ALTRUN_VERSION, #13#10, HotKeyStr]);

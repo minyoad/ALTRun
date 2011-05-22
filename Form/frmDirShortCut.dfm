@@ -11,6 +11,7 @@ object DirShortCutForm: TDirShortCutForm
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -51,7 +52,8 @@ object DirShortCutForm: TDirShortCutForm
     ViewStyle = vsReport
     OnDblClick = lvShortCutDblClick
     OnKeyDown = lvShortCutKeyDown
-    OnKeyPress = lvShortCutKeyPress
+    OnMouseDown = lvShortCutMouseDown
+    ExplicitLeft = -6
   end
   object pnlRight: TPanel
     Left = 496
@@ -99,7 +101,6 @@ object DirShortCutForm: TDirShortCutForm
       Anchors = [akRight, akBottom]
       TabOrder = 3
       Kind = bkCancel
-      ExplicitLeft = 23
     end
     object btnOK: TBitBtn
       Left = 30
@@ -128,7 +129,6 @@ object DirShortCutForm: TDirShortCutForm
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
       NumGlyphs = 2
-      ExplicitLeft = 23
     end
     object btnClear: TBitBtn
       Left = 22
@@ -154,7 +154,7 @@ object DirShortCutForm: TDirShortCutForm
       Width = 25
       Height = 21
       TabOrder = 7
-      Text = '0'
+      Text = '10'
     end
     object ud1: TUpDown
       Left = 105
@@ -164,7 +164,7 @@ object DirShortCutForm: TDirShortCutForm
       Associate = edtDepth
       Min = 1
       Max = 10
-      Position = 1
+      Position = 10
       TabOrder = 8
     end
   end

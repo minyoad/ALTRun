@@ -25,9 +25,11 @@ type
     procedure btnEditClick(Sender: TObject);
     procedure btnOpenDirClick(Sender: TObject);
     procedure chkRecurveClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure lvShortCutDblClick(Sender: TObject);
     procedure lvShortCutKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure lvShortCutKeyPress(Sender: TObject; var Key: Char);
+    procedure lvShortCutMouseDown(Sender: TObject; Button: TMouseButton; Shift:
+        TShiftState; X, Y: Integer);
   private
     FCurrDepth: Integer;
     procedure search(dir: string);
@@ -64,7 +66,9 @@ begin
   chkRecurve.Caption := resChkRecurve;
   chkRecurve.Hint := resChkRecurveHint;
 
-
+  chkRecurve.Checked:=Recurve;
+  ud1.Position:=RecurveDepth;
+  
   lvShortCut.Columns.Items[0].Caption := resShortCut;
   lvShortCut.Columns.Items[1].Caption := resName;
   lvShortCut.Columns.Items[2].Caption := resParamType;
@@ -80,12 +84,7 @@ procedure TDirShortCutForm.btnDeleteClick(Sender: TObject);
 var
   i:integer;
 begin
-//  for I := 0 to lvShortCut.Items.Count - 1 do
-//  begin
-//    if lvShortCut.Items[i].Selected then
-//    lvShortCut.Items.Delete(i);
-//  end;
-  lvShortCut.Items.Delete(lvShortCut.ItemIndex);
+  lvShortCut.DeleteSelected;
 end;
 
 procedure TDirShortCutForm.btnEditClick(Sender: TObject);
@@ -199,6 +198,12 @@ begin
   edtDepth.Enabled := chkRecurve.Checked;
 end;
 
+procedure TDirShortCutForm.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Recurve:=chkRecurve.Checked;
+  RecurveDepth:=ud1.Position;
+end;
+
 function TDirShortCutForm.GetDirDepth(ADirName: string): Integer;
 begin
   Result := 0;
@@ -226,12 +231,13 @@ begin
   end;
 end;
 
-procedure TDirShortCutForm.lvShortCutKeyPress(Sender: TObject; var Key: Char);
+procedure TDirShortCutForm.lvShortCutMouseDown(Sender: TObject; Button:
+    TMouseButton; Shift: TShiftState; X, Y: Integer);
 begin
-//  case Ord(Key) of
-//    VK_DELETE: btnDeleteClick(nil);
-//    VK_RETURN: btnEditClick(nil);
-//  end;
+//  if Button=mbRight then
+//  begin
+//    lvShortCut.GetItemAt(x,y).Selected:=not lvShortCut.GetItemAt(x,y).Selected;
+//  end;  
 end;
 
 procedure TDirShortCutForm.search(dir: string);

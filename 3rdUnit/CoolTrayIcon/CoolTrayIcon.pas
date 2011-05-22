@@ -99,7 +99,7 @@ type
   end;
 
   TBalloonHintIcon = (bitNone, bitInfo, bitWarning, bitError, bitCustom);
-  TBalloonHintTimeOut = 10..60;   // Windows defines 10-60 secs. as min-max
+  TBalloonHintTimeOut = 5..60;   // Windows defines 10-60 secs. as min-max
   TBehavior = (bhWin95, bhWin2000);
   THintString = AnsiString;       // 128 bytes, last char should be #0
 
