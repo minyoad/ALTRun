@@ -2,3 +2,7 @@
 au                            |autoruns                      
 em                            |emule                         
 re                            |最近打开文件 目录             
+no                            |记事本                        
+aut                           |autoruns                      
+zd                            |百度知道 搜索引擎             
+fre                           |FreeU24                       

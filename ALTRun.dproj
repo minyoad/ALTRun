@@ -1,0 +1,130 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{b34a89f3-4c00-4aed-9677-c629f2672609}</ProjectGuid>
+    <MainSource>ALTRun.dpr</MainSource>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>Bin\ALTRun.exe</DCC_DependencyCheckOutputName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_IOChecking>False</DCC_IOChecking>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_Optimize>False</DCC_Optimize>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_ExeOutput>Bin</DCC_ExeOutput>
+    <DCC_DcuOutput>Dcu</DCC_DcuOutput>
+    <DCC_ObjOutput>Dcu</DCC_ObjOutput>
+    <DCC_HppOutput>Dcu</DCC_HppOutput>
+    <DCC_UnitSearchPath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\HotKeyManager;3rdUnit\CoolTrayIcon</DCC_UnitSearchPath>
+    <DCC_ResourcePath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\HotKeyManager;3rdUnit\CoolTrayIcon</DCC_ResourcePath>
+    <DCC_ObjPath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\HotKeyManager;3rdUnit\CoolTrayIcon</DCC_ObjPath>
+    <DCC_IncludePath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\HotKeyManager;3rdUnit\CoolTrayIcon</DCC_IncludePath>
+    <DCC_Define>RELEASE</DCC_Define>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_IOChecking>False</DCC_IOChecking>
+    <DCC_Optimize>False</DCC_Optimize>
+    <DCC_ExeOutput>Bin</DCC_ExeOutput>
+    <DCC_DcuOutput>Dcu</DCC_DcuOutput>
+    <DCC_ObjOutput>Dcu</DCC_ObjOutput>
+    <DCC_HppOutput>Dcu</DCC_HppOutput>
+    <DCC_UnitSearchPath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\HotKeyManager;3rdUnit\CoolTrayIcon</DCC_UnitSearchPath>
+    <DCC_ResourcePath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\HotKeyManager;3rdUnit\CoolTrayIcon</DCC_ResourcePath>
+    <DCC_ObjPath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\HotKeyManager;3rdUnit\CoolTrayIcon</DCC_ObjPath>
+    <DCC_IncludePath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\HotKeyManager;3rdUnit\CoolTrayIcon</DCC_IncludePath>
+    <DCC_Define>DEBUG</DCC_Define>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+<BorlandProject xmlns=""> <Delphi.Personality>   <Parameters>
+      <Parameters Name="UseLauncher">False</Parameters>
+      <Parameters Name="LoadAllSymbols">True</Parameters>
+      <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+    </Parameters>
+    <VersionInfo>
+      <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+      <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+      <VersionInfo Name="MajorVer">1</VersionInfo>
+      <VersionInfo Name="MinorVer">0</VersionInfo>
+      <VersionInfo Name="Release">0</VersionInfo>
+      <VersionInfo Name="Build">0</VersionInfo>
+      <VersionInfo Name="Debug">False</VersionInfo>
+      <VersionInfo Name="PreRelease">False</VersionInfo>
+      <VersionInfo Name="Special">False</VersionInfo>
+      <VersionInfo Name="Private">False</VersionInfo>
+      <VersionInfo Name="DLL">False</VersionInfo>
+      <VersionInfo Name="Locale">1033</VersionInfo>
+      <VersionInfo Name="CodePage">1252</VersionInfo>
+    </VersionInfo>
+    <VersionInfoKeys>
+      <VersionInfoKeys Name="CompanyName">ET Worker</VersionInfoKeys>
+      <VersionInfoKeys Name="FileDescription">ALTRun with hotkey and limited keystroke</VersionInfoKeys>
+      <VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+      <VersionInfoKeys Name="InternalName"></VersionInfoKeys>
+      <VersionInfoKeys Name="LegalCopyright"></VersionInfoKeys>
+      <VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys>
+      <VersionInfoKeys Name="OriginalFilename"></VersionInfoKeys>
+      <VersionInfoKeys Name="ProductName">ALTRun</VersionInfoKeys>
+      <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+      <VersionInfoKeys Name="Comments"></VersionInfoKeys>
+    </VersionInfoKeys>
+    <Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dcldbx4100.bpl">CodeGear dbExpress Components</Excluded_Packages>
+    </Excluded_Packages>
+    <Source>
+      <Source Name="MainSource">ALTRun.dpr</Source>
+    </Source>
+  </Delphi.Personality> </BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <ItemGroup />
+  <ItemGroup>
+    <DelphiCompile Include="ALTRun.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <RcCompile Include="Res\ALTRun.rc">
+      <ModuleName>ALTRun.rc</ModuleName>
+      <Form>Res\ALTRun.res</Form>
+    </RcCompile>
+    <DCCReference Include="3rdUnit\HotLog\HotLog.pas" />
+    <DCCReference Include="Form\frmAbout.pas">
+      <Form>AboutForm</Form>
+    </DCCReference>
+    <DCCReference Include="Form\frmALTRun.pas">
+      <Form>ALTRunForm</Form>
+    </DCCReference>
+    <DCCReference Include="Form\frmConfig.pas">
+      <Form>ConfigForm</Form>
+    </DCCReference>
+    <DCCReference Include="Form\frmDirShortCut.pas">
+      <Form>DirShortCutForm</Form>
+    </DCCReference>
+    <DCCReference Include="Form\frmHelp.pas">
+      <Form>HelpForm</Form>
+    </DCCReference>
+    <DCCReference Include="Form\frmInvalid.pas">
+      <Form>InvalidForm</Form>
+    </DCCReference>
+    <DCCReference Include="Form\frmLang.pas">
+      <Form>LangForm</Form>
+    </DCCReference>
+    <DCCReference Include="Form\frmParam.pas">
+      <Form>ParamForm</Form>
+    </DCCReference>
+    <DCCReference Include="Form\frmShortCut.pas">
+      <Form>ShortCutForm</Form>
+    </DCCReference>
+    <DCCReference Include="Form\frmShortCutMan.pas">
+      <Form>ShortCutManForm</Form>
+    </DCCReference>
+    <DCCReference Include="Unit\untALTRunOption.pas" />
+    <DCCReference Include="Unit\untShortCutMan.pas" />
+    <DCCReference Include="Unit\untUtilities.pas" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+</Project>
