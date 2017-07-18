@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="HotKeyManager">
+  <const name="_VK_BROWSER_BACK" type="Integer">
+    <value>
+      $A6
+    </value>
+  </const>
+  <const name="_VK_BROWSER_FORWARD" type="Integer">
+    <value>
+      $A7
+    </value>
+  </const>
+  <const name="_VK_BROWSER_REFRESH" type="Integer">
+    <value>
+      $A8
+    </value>
+  </const>
+  <const name="_VK_BROWSER_STOP" type="Integer">
+    <value>
+      $A9
+    </value>
+  </const>
+  <const name="_VK_BROWSER_SEARCH" type="Integer">
+    <value>
+      $AA
+    </value>
+  </const>
+  <const name="_VK_BROWSER_FAVORITES" type="Integer">
+    <value>
+      $AB
+    </value>
+  </const>
+  <const name="_VK_BROWSER_HOME" type="Integer">
+    <value>
+      $AC
+    </value>
+  </const>
+  <const name="_VK_VOLUME_MUTE" type="Integer">
+    <value>
+      $AD
+    </value>
+  </const>
+  <const name="_VK_VOLUME_DOWN" type="Integer">
+    <value>
+      $AE
+    </value>
+  </const>
+  <const name="_VK_VOLUME_UP" type="Integer">
+    <value>
+      $AF
+    </value>
+  </const>
+  <const name="_VK_MEDIA_NEXT_TRACK" type="Integer">
+    <value>
+      $B0
+    </value>
+  </const>
+  <const name="_VK_MEDIA_PREV_TRACK" type="Integer">
+    <value>
+      $B1
+    </value>
+  </const>
+  <const name="_VK_MEDIA_STOP" type="Integer">
+    <value>
+      $B2
+    </value>
+  </const>
+  <const name="_VK_MEDIA_PLAY_PAUSE" type="Integer">
+    <value>
+      $B3
+    </value>
+  </const>
+  <const name="_VK_LAUNCH_MAIL" type="Integer">
+    <value>
+      $B4
+    </value>
+  </const>
+  <const name="_VK_LAUNCH_MEDIA_SELECT" type="Integer">
+    <value>
+      $B5
+    </value>
+  </const>
+  <const name="_VK_LAUNCH_APP1" type="Integer">
+    <value>
+      $B6
+    </value>
+  </const>
+  <const name="_VK_LAUNCH_APP2" type="Integer">
+    <value>
+      $B7
+    </value>
+  </const>
+  <const name="NAME_VK_BROWSER_BACK" type="string">
+    <value>
+      Browser Back
+    </value>
+  </const>
+  <const name="NAME_VK_BROWSER_FORWARD" type="string">
+    <value>
+      Browser Forward
+    </value>
+  </const>
+  <const name="NAME_VK_BROWSER_REFRESH" type="string">
+    <value>
+      Browser Refresh
+    </value>
+  </const>
+  <const name="NAME_VK_BROWSER_STOP" type="string">
+    <value>
+      Browser Stop
+    </value>
+  </const>
+  <const name="NAME_VK_BROWSER_SEARCH" type="string">
+    <value>
+      Browser Search
+    </value>
+  </const>
+  <const name="NAME_VK_BROWSER_FAVORITES" type="string">
+    <value>
+      Browser Favorites
+    </value>
+  </const>
+  <const name="NAME_VK_BROWSER_HOME" type="string">
+    <value>
+      Browser Start/Home
+    </value>
+  </const>
+  <const name="NAME_VK_VOLUME_MUTE" type="string">
+    <value>
+      Volume Mute
+    </value>
+  </const>
+  <const name="NAME_VK_VOLUME_DOWN" type="string">
+    <value>
+      Volume Down
+    </value>
+  </const>
+  <const name="NAME_VK_VOLUME_UP" type="string">
+    <value>
+      Volume Up
+    </value>
+  </const>
+  <const name="NAME_VK_MEDIA_NEXT_TRACK" type="string">
+    <value>
+      Next Track
+    </value>
+  </const>
+  <const name="NAME_VK_MEDIA_PREV_TRACK" type="string">
+    <value>
+      Previous Track
+    </value>
+  </const>
+  <const name="NAME_VK_MEDIA_STOP" type="string">
+    <value>
+      Stop Media
+    </value>
+  </const>
+  <const name="NAME_VK_MEDIA_PLAY_PAUSE" type="string">
+    <value>
+      Play/Pause Media
+    </value>
+  </const>
+  <const name="NAME_VK_LAUNCH_MAIL" type="string">
+    <value>
+      Start Mail
+    </value>
+  </const>
+  <const name="NAME_VK_LAUNCH_MEDIA_SELECT" type="string">
+    <value>
+      Select Media
+    </value>
+  </const>
+  <const name="NAME_VK_LAUNCH_APP1" type="string">
+    <value>
+      Start Application 1
+    </value>
+  </const>
+  <const name="NAME_VK_LAUNCH_APP2" type="string">
+    <value>
+      Start Application 2
+    </value>
+  </const>
+  <pointer name="PHotKeyRegistration" type="THotKeyRegistration" indircnt="1" />
+  <struct name="THotKeyRegistration">
+    <field name="HotKey" type="Cardinal" visibility="public" />
+    <field name="KeyIndex" type="Word" visibility="public" />
+  </struct>
+  <class name="THotKeyManager">
+    <ancestor name="TComponent" namespace="Classes">
+      <methodref name="GetComObject" visibility="private">
+      </methodref>
+      <methodref name="GetComponent" visibility="private">
+      </methodref>
+      <methodref name="GetComponentCount" visibility="private">
+      </methodref>
+      <methodref name="GetComponentIndex" visibility="private">
+      </methodref>
+      <methodref name="Insert" visibility="private">
+      </methodref>
+      <methodref name="ReadLeft" visibility="private">
+      </methodref>
+      <methodref name="ReadTop" visibility="private">
+      </methodref>
+      <methodref name="Remove" visibility="private">
+      </methodref>
+      <methodref name="RemoveNotification" visibility="private">
+      </methodref>
+      <methodref name="SetComponentIndex" visibility="private">
+      </methodref>
+      <methodref name="SetReference" visibility="private">
+      </methodref>
+      <methodref name="WriteLeft" visibility="private">
+      </methodref>
+      <methodref name="WriteTop" visibility="private">
+      </methodref>
+      <methodref name="IntfGetComponent" visibility="private">
+      </methodref>
+      <methodref name="ChangeName" visibility="protected">
+      </methodref>
+      <methodref name="DefineProperties" visibility="public">
+      </methodref>
+      <methodref name="GetChildren" visibility="protected">
+      </methodref>
+      <methodref name="GetChildOwner" visibility="protected">
+      </methodref>
+      <methodref name="GetChildParent" visibility="protected">
+      </methodref>
+      <methodref name="GetOwner" visibility="protected">
+      </methodref>
+      <methodref name="Loaded" visibility="public">
+      </methodref>
+      <methodref name="Notification" visibility="public">
+      </methodref>
+      <methodref name="PaletteCreated" visibility="protected">
+      </methodref>
+      <methodref name="ReadState" visibility="public">
+      </methodref>
+      <methodref name="SetAncestor" visibility="protected">
+      </methodref>
+      <methodref name="SetDesigning" visibility="protected">
+      </methodref>
+      <methodref name="SetInline" visibility="protected">
+      </methodref>
+      <methodref name="SetDesignInstance" visibility="protected">
+      </methodref>
+      <methodref name="SetName" visibility="public">
+      </methodref>
+      <methodref name="SetChildOrder" visibility="protected">
+      </methodref>
+      <methodref name="SetParentComponent" visibility="protected">
+      </methodref>
+      <methodref name="Updating" visibility="protected">
+      </methodref>
+      <methodref name="Updated" visibility="protected">
+      </methodref>
+      <methodref name="UpdateRegistry" visibility="public">
+      </methodref>
+      <methodref name="ValidateRename" visibility="public">
+      </methodref>
+      <methodref name="ValidateContainer" visibility="protected">
+      </methodref>
+      <methodref name="ValidateInsert" visibility="protected">
+      </methodref>
+      <methodref name="WriteState" visibility="public">
+      </methodref>
+      <methodref name="QueryInterface" visibility="public">
+      </methodref>
+      <methodref name="_AddRef" visibility="protected">
+      </methodref>
+      <methodref name="_Release" visibility="protected">
+      </methodref>
+      <methodref name="GetTypeInfoCount" visibility="protected">
+      </methodref>
+      <methodref name="GetTypeInfo" visibility="protected">
+      </methodref>
+      <methodref name="GetIDsOfNames" visibility="protected">
+      </methodref>
+      <methodref name="Invoke" visibility="protected">
+      </methodref>
+      <methodref name="Create" visibility="public">
+      </methodref>
+      <methodref name="Destroy" visibility="public">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public">
+      </methodref>
+      <methodref name="DestroyComponents" visibility="public">
+      </methodref>
+      <methodref name="Destroying" visibility="public">
+      </methodref>
+      <methodref name="ExecuteAction" visibility="public">
+      </methodref>
+      <methodref name="FindComponent" visibility="public">
+      </methodref>
+      <methodref name="FreeNotification" visibility="public">
+      </methodref>
+      <methodref name="RemoveFreeNotification" visibility="public">
+      </methodref>
+      <methodref name="FreeOnRelease" visibility="public">
+      </methodref>
+      <methodref name="GetEnumerator" visibility="public">
+      </methodref>
+      <methodref name="GetParentComponent" visibility="public">
+      </methodref>
+      <methodref name="GetNamePath" visibility="public">
+      </methodref>
+      <methodref name="HasParent" visibility="public">
+      </methodref>
+      <methodref name="InsertComponent" visibility="public">
+      </methodref>
+      <methodref name="RemoveComponent" visibility="public">
+      </methodref>
+      <methodref name="SetSubComponent" visibility="public">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public">
+      </methodref>
+      <methodref name="UpdateAction" visibility="public">
+      </methodref>
+      <methodref name="IsImplementorOf" visibility="public">
+      </methodref>
+      <methodref name="ReferenceInterface" visibility="public">
+      </methodref>
+      <propertyref name="ComObject" visibility="public">
+      </propertyref>
+      <propertyref name="Components" visibility="public">
+      </propertyref>
+      <propertyref name="ComponentCount" visibility="public">
+      </propertyref>
+      <propertyref name="ComponentIndex" visibility="public">
+      </propertyref>
+      <propertyref name="ComponentState" visibility="public">
+      </propertyref>
+      <propertyref name="ComponentStyle" visibility="public">
+      </propertyref>
+      <propertyref name="DesignInfo" visibility="public">
+      </propertyref>
+      <propertyref name="Owner" visibility="public">
+      </propertyref>
+      <propertyref name="VCLComObject" visibility="public">
+      </propertyref>
+      <propertyref name="Name" visibility="published">
+      </propertyref>
+      <propertyref name="Tag" visibility="published">
+      </propertyref>
+      <ancestor name="TPersistent" namespace="Classes">
+        <methodref name="AssignError" visibility="private">
+        </methodref>
+        <methodref name="AssignTo" visibility="public">
+        </methodref>
+        <methodref name="DefineProperties" visibility="public">
+        </methodref>
+        <methodref name="GetOwner" visibility="protected">
+        </methodref>
+        <methodref name="Destroy" visibility="public">
+        </methodref>
+        <methodref name="Assign" visibility="public">
+        </methodref>
+        <methodref name="GetNamePath" visibility="public">
+        </methodref>
+        <ancestor name="TObject" namespace="System">
+          <methodref name="Create" visibility="public">
+          </methodref>
+          <methodref name="Free" visibility="public">
+          </methodref>
+          <methodref name="InitInstance" visibility="public">
+          </methodref>
+          <methodref name="CleanupInstance" visibility="public">
+          </methodref>
+          <methodref name="ClassType" visibility="public">
+          </methodref>
+          <methodref name="ClassName" visibility="public">
+          </methodref>
+          <methodref name="ClassNameIs" visibility="public">
+          </methodref>
+          <methodref name="ClassParent" visibility="public">
+          </methodref>
+          <methodref name="ClassInfo" visibility="public">
+          </methodref>
+          <methodref name="InstanceSize" visibility="public">
+          </methodref>
+          <methodref name="InheritsFrom" visibility="public">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public">
+          </methodref>
+          <methodref name="MethodName" visibility="public">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public">
+          </methodref>
+          <methodref name="GetInterface" visibility="public">
+          </methodref>
+          <methodref name="GetInterfaceEntry" visibility="public">
+          </methodref>
+          <methodref name="GetInterfaceTable" visibility="public">
+          </methodref>
+          <methodref name="SafeCallException" visibility="public">
+          </methodref>
+          <methodref name="AfterConstruction" visibility="public">
+          </methodref>
+          <methodref name="BeforeDestruction" visibility="public">
+          </methodref>
+          <methodref name="Dispatch" visibility="public">
+          </methodref>
+          <methodref name="DefaultHandler" visibility="public">
+          </methodref>
+          <methodref name="NewInstance" visibility="public">
+          </methodref>
+          <methodref name="FreeInstance" visibility="public">
+          </methodref>
+          <methodref name="Destroy" visibility="public">
+          </methodref>
+        </ancestor>
+      </ancestor>
+    </ancestor>
+    <members>
+      <field name="FHandle" type="HWND" visibility="private" />
+      <field name="HotKeyList" type="TList" visibility="private" />
+      <field name="FOnHotKeyPressed" type="TOnHotKeyPressed" visibility="private" />
+      <function name="DisposeHotKey" visibility="protected">
+        <parameters>
+          <parameter name="hkr" type="PHotKeyRegistration" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <procedure name="HookProc" visibility="public" procflags="virtual">
+        <parameters>
+          <parameter name="Msg" type="TMessage" paramflags="var" />
+        </parameters>
+      </procedure>
+      <constructor name="Create" visibility="public">
+        <parameters>
+          <parameter name="AOwner" type="TComponent" />
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public">
+        <parameters>
+        </parameters>
+      </destructor>
+      <function name="AddHotKey" visibility="public">
+        <parameters>
+          <parameter name="HotKey" type="Cardinal" />
+          <retval type="Word" />
+        </parameters>
+      </function>
+      <function name="ChangeHotKey" visibility="public">
+        <parameters>
+          <parameter name="Index" type="Word" />
+          <parameter name="NewHotKey" type="Cardinal" />
+          <retval type="Word" />
+        </parameters>
+      </function>
+      <function name="RemoveHotKey" visibility="public">
+        <parameters>
+          <parameter name="HotKey" type="Cardinal" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="RemoveHotKeyByIndex" visibility="public">
+        <parameters>
+          <parameter name="Index" type="Word" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <procedure name="ClearHotKeys" visibility="public">
+      </procedure>
+      <function name="HotKeyValid" visibility="public">
+        <parameters>
+          <parameter name="HotKey" type="Cardinal" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <event name="OnHotKeyPressed" visibility="published" read="FOnHotKeyPressed" write="FOnHotKeyPressed" type="TOnHotKeyPressed" />
+    </members>
+  </class>
+  <function name="GetHotKey" visibility="public">
+    <parameters>
+      <parameter name="Modifiers" type="Word" />
+      <parameter name="Key" type="Word" />
+      <retval type="Cardinal" />
+    </parameters>
+  </function>
+  <procedure name="SeparateHotKey" visibility="public">
+    <parameters>
+      <parameter name="HotKey" type="Cardinal" />
+      <parameter name="Modifiers" type="Word" paramflags="var" />
+      <parameter name="Key" type="Word" paramflags="var" />
+    </parameters>
+  </procedure>
+  <function name="HotKeyAvailable" visibility="public">
+    <parameters>
+      <parameter name="HotKey" type="Cardinal" />
+      <retval type="Boolean" />
+    </parameters>
+  </function>
+  <function name="IsExtendedKey" visibility="public">
+    <parameters>
+      <parameter name="Key" type="Word" />
+      <retval type="Boolean" />
+    </parameters>
+  </function>
+  <function name="HotKeyToText" visibility="public">
+    <parameters>
+      <parameter name="HotKey" type="Cardinal" />
+      <parameter name="Localized" type="Boolean" />
+      <retval type="string" />
+    </parameters>
+  </function>
+  <function name="TextToHotKey" visibility="public">
+    <parameters>
+      <parameter name="Text" type="string" />
+      <parameter name="Localized" type="Boolean" />
+      <retval type="Cardinal" />
+    </parameters>
+  </function>
+  <procedure name="Register" visibility="public">
+  </procedure>
+</namespace>

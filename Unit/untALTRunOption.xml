@@ -17,7 +17,7 @@
   </const>
   <const name="ALTRUN_VERSION" type="string">
     <value>
-      V1.46.5
+      V1.46.7
     </value>
   </const>
   <const name="UPGRADE_URL" type="string">
@@ -48,6 +48,11 @@
   <const name="FOREGROUND_WINDOW_TEXT_FLAG" type="string">
     <value>
       {%%wt}
+    </value>
+  </const>
+  <const name="FOREGROUND_WINDOW_CLASS_FLAG" type="string">
+    <value>
+      {%%wc}
     </value>
   </const>
   <const name="SHOW_MAX_FLAG" type="string">
@@ -113,6 +118,11 @@
   <const name="KEY_HOTKEY2" type="string">
     <value>
       HotKey2
+    </value>
+  </const>
+  <const name="KEY_LASTITEMHOTKEY" type="string">
+    <value>
+      LastItemHotKey
     </value>
   </const>
   <const name="KEY_AUTORUN" type="string">
@@ -253,6 +263,11 @@
   <const name="KEY_MANWINHEIGHT" type="string">
     <value>
       ManWinHeight
+    </value>
+  </const>
+  <const name="KEY_MANCOLWIDTH" type="string">
+    <value>
+      ManColWidth
     </value>
   </const>
   <const name="KEY_BGFILENAME" type="string">
@@ -1557,6 +1572,7 @@
   </const>
   <variable name="HotKeyStr1" type="string" />
   <variable name="HotKeyStr2" type="string" />
+  <variable name="LastItemHotKeyStr" type="string" />
   <variable name="TraceEnable" type="Boolean" />
   <variable name="IsRunFirstTime" type="Boolean" />
   <variable name="AutoRun" type="Boolean" />
@@ -1600,6 +1616,7 @@
   <variable name="ManWinLeft" type="Integer" />
   <variable name="ManWinWidth" type="Integer" />
   <variable name="ManWinHeight" type="Integer" />
+  <variable name="ManColWidth" />
   <variable name="ShortCutRunCount" type="Integer" />
   <variable name="HandleID" type="Cardinal" />
   <variable name="ModifyTime" type="string" />

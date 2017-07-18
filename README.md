@@ -12,3 +12,11 @@ It runs under Windows system.
 [Compile]
 ----------
 Please add Dcu folder in root folder for compile.
+
+[3rd unit]
+CnPack
+CoolTrayIcon
+HotKeyManager
+pngimage
+regexpr
+rxlib

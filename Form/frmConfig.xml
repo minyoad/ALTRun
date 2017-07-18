@@ -2212,6 +2212,23 @@
       <field name="lblHotkeyHint" type="TLabel" visibility="published" />
       <field name="seFormWidth" type="TRxSpinEdit" visibility="published" />
       <field name="lblFormWidth" type="TLabel" visibility="published" />
+      <field name="tsStyle" type="TTabSheet" visibility="published" />
+      <field name="dlgColor" type="TColorDialog" visibility="published" />
+      <field name="pnlDemo" type="TPanel" visibility="published" />
+      <field name="edtCopy" type="TEdit" visibility="published" />
+      <field name="edtCommandLine" type="TEdit" visibility="published" />
+      <field name="lstShortCut" type="TListBox" visibility="published" />
+      <field name="edtShortCut" type="TEdit" visibility="published" />
+      <field name="edtHint" type="TEdit" visibility="published" />
+      <field name="lblShortCut" type="TLabel" visibility="published" />
+      <field name="imgBackground" type="TImage" visibility="published" />
+      <field name="btnClose" type="TSpeedButton" visibility="published" />
+      <field name="btnShortCut" type="TSpeedButton" visibility="published" />
+      <field name="btnConfig" type="TSpeedButton" visibility="published" />
+      <field name="pmColor" type="TPopupMenu" visibility="published" />
+      <field name="pmFont" type="TPopupMenu" visibility="published" />
+      <field name="actlstGUI" type="TActionList" visibility="published" />
+      <field name="actSelectChange" type="TAction" visibility="published" />
       <procedure name="lbledtHotKey1KeyDown" visibility="published">
         <parameters>
           <parameter name="Sender" type="TObject" />
@@ -2292,6 +2309,25 @@
           <parameter name="Shift" type="TShiftState" />
         </parameters>
       </procedure>
+      <procedure name="edtShortCutChange" visibility="published">
+        <parameters>
+          <parameter name="Sender" type="TObject" />
+        </parameters>
+      </procedure>
+      <procedure name="actSelectChangeExecute" visibility="published">
+        <parameters>
+          <parameter name="Sender" type="TObject" />
+        </parameters>
+      </procedure>
+      <procedure name="RefreshDemo" visibility="private">
+      </procedure>
+      <procedure name="RefreshOperationHint" visibility="private">
+      </procedure>
+      <function name="DirAvailable" visibility="private">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
       <function name="DisplayHotKey1" visibility="public">
         <parameters>
           <parameter name="KeyName" type="string" />

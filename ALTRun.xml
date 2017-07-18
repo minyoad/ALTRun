@@ -1,20 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <namespace name="ALTRun">
-  <contains name="ELang" />
-  <contains name="EZlib2" />
-  <contains name="EZip" />
-  <contains name="EListView" />
   <contains name="pngzlib" />
   <contains name="pnglang" />
   <contains name="MMSystem" />
   <contains name="Spin" />
   <contains name="RXSpin" />
-  <contains name="WinSock" />
-  <contains name="ETypes" />
-  <contains name="EXMLBuilder" />
-  <contains name="EBase64" />
-  <contains name="EHash" />
-  <contains name="EEncrypt" />
   <contains name="DateUtils" />
   <contains name="RzLabel" />
   <contains name="RzRadGrp" />
@@ -117,18 +107,9 @@
   <contains name="Graphics" />
   <contains name="Registry" />
   <contains name="IniFiles" />
-  <contains name="EDisAsm" />
-  <contains name="ELogManager" />
-  <contains name="EWebTools" />
-  <contains name="ESockets" />
-  <contains name="EHook" />
-  <contains name="EDebug" />
-  <contains name="ECore" />
-  <contains name="EConsts" />
   <contains name="Classes" />
   <contains name="TypInfo" />
   <contains name="VarUtils" />
-  <contains name="ELeaks" />
   <contains name="Windows" />
   <contains name="Variants" />
   <contains name="untClipboard" />
@@ -149,7 +130,6 @@
   <contains name="pngimage" />
   <contains name="SysUtils" />
   <contains name="Forms" />
-  <contains name="ExceptionLog" />
   <contains name="SysInit" />
   <contains name="System" />
   <variable name="IsExited" type="Boolean" />

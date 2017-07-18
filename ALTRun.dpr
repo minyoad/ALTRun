@@ -2,7 +2,7 @@ program ALTRun;
 
 uses
   //CnMemProf,
-  ExceptionLog,
+//  ExceptionLog,
   Forms,
   SysUtils,
   pngimage in '3rdUnit\pngimage\pngimage.pas',

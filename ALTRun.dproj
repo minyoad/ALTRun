@@ -32,10 +32,10 @@
     <DCC_DcuOutput>Dcu</DCC_DcuOutput>
     <DCC_ObjOutput>Dcu</DCC_ObjOutput>
     <DCC_HppOutput>Dcu</DCC_HppOutput>
-    <DCC_UnitSearchPath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\CoolTrayIcon</DCC_UnitSearchPath>
-    <DCC_ResourcePath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\CoolTrayIcon</DCC_ResourcePath>
-    <DCC_ObjPath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\CoolTrayIcon</DCC_ObjPath>
-    <DCC_IncludePath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\CoolTrayIcon</DCC_IncludePath>
+    <DCC_UnitSearchPath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\CoolTrayIcon;3rdUnit\HotKeyManager</DCC_UnitSearchPath>
+    <DCC_ResourcePath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\CoolTrayIcon;3rdUnit\HotKeyManager</DCC_ResourcePath>
+    <DCC_ObjPath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\CoolTrayIcon;3rdUnit\HotKeyManager</DCC_ObjPath>
+    <DCC_IncludePath>Form;Unit;3rdUnit\CnPack;3rdUnit\HotLog;3rdUnit\pngimage;3rdUnit\regexpr;3rdUnit\CoolTrayIcon;3rdUnit\HotKeyManager</DCC_IncludePath>
     <DCC_GenerateStackFrames>True</DCC_GenerateStackFrames>
     <DCC_OutputXMLDocumentation>True</DCC_OutputXMLDocumentation>
     <DCC_Define>DEBUG;EUREKALOG;EUREKALOG_VER6</DCC_Define>
@@ -46,136 +46,6 @@
     <Borland.ProjectType />
     <BorlandProject>
 <BorlandProject><Delphi.Personality><Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">1</VersionInfo><VersionInfo Name="MinorVer">0</VersionInfo><VersionInfo Name="Release">0</VersionInfo><VersionInfo Name="Build">0</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">1033</VersionInfo><VersionInfo Name="CodePage">1252</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName">ET Worker</VersionInfoKeys><VersionInfoKeys Name="FileDescription">Run shortcut with limited keystroke</VersionInfoKeys><VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys><VersionInfoKeys Name="InternalName"></VersionInfoKeys><VersionInfoKeys Name="LegalCopyright">Copyleft</VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename"></VersionInfoKeys><VersionInfoKeys Name="ProductName">ALTRun</VersionInfoKeys><VersionInfoKeys Name="ProductVersion">1.0 +</VersionInfoKeys><VersionInfoKeys Name="Comments"></VersionInfoKeys><VersionInfoKeys Name="LastCompiledTime"></VersionInfoKeys></VersionInfoKeys><Excluded_Packages>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       <Excluded_Packages Name="C:\Documents and Settings\All Users\Documents\RAD Studio\5.0\Bpl\AsyncPro_D2007.bpl">TurboPower AsyncPro 5 run-time package</Excluded_Packages>
       <Excluded_Packages Name="$(BDS)\bin\dcldbx4100.bpl">CodeGear dbExpress Components</Excluded_Packages>
       <Excluded_Packages Name="C:\Documents and Settings\All Users\Documents\RAD Studio\5.0\Bpl\dclcxSchedulerD11.bpl">File C:\Documents and Settings\All Users\Documents\RAD Studio\5.0\Bpl\dclcxSchedulerD11.bpl not found</Excluded_Packages>
@@ -234,7 +104,6 @@
     </RcCompile>
   </ItemGroup>
 </Project>
-
 <!-- EurekaLog First Line
 [Exception Log]
 EurekaLog Version=6023
